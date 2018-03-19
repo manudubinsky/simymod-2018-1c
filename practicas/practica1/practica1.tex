@@ -1,0 +1,81 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{1}{Modelo Abstracto: ``Juego de la Vida"}
+
+\section{Introducción}
+
+\subsection{Juego de la Vida}
+
+El \textbf{Juego de la Vida} es un sistema que modela el ciclo de la vida 
+de una población dispuesta en una grilla. Las reglas que 
+determinan el nacimiento y la muerte de los individuos permiten 
+considerar la evolución de la población. La historia, las reglas y el 
+interés teórico que sucitó este juego  está detallado en \url{https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life}
+
+\subsection{ncurses}
+
+La librería \textbf{ncurses} permite controlar una terminal en modo 
+texto. La historia de la librería está descripta en 
+\url{https://en.wikipedia.org/wiki/Ncurses}. Hay un \emph{wrapper} de 
+la librería para python 
+\url{https://docs.python.org/3/howto/curses.html}. La funcionalidad que 
+vamos a requerir del wrapper en python es la siguiente:
+
+\begin{itemize}
+	\item Sección \textbf{Starting and ending a curses application}
+	\item Otros comandos: \textbf{nodelay}, \textbf{getch}
+\end{itemize}
+
+\subsection{Matrices en python}
+
+Para inicializar una matriz en python ver
+
+\smallskip
+
+\url{https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python}
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+Implementar una versión reducida del \textbf{juego de la vida} en 
+python con las siguientes características:
+
+\begin{itemize}
+	\item En lugar de considerar una grilla infinita, vamos a considerar  
+	una grilla cuadrada de 25 $\times$ 25.
+	\item La visualización de la evolución del sistema debe estar 
+	implementada en modo texto (a las casillas que contienen un 
+	individuo les corresponderá una ``X" \ en la pantalla y las que estén 
+	vacías un <<espacio>> `` ").
+	\item Para hacer pruebas el input de la configuración inicial puede estar 
+	hardcodeado, pero en la versión final tiene que estar implementado 
+	mediante un archivo de texto que indique en cada línea los pares 
+	(<<fila>>, <<columna>>) en los que hay un individuo. 
+	\item Al principio de la ejecución hay que mostrar la 
+	configuración inicial, con la <<tecla>> ``b" (begin) comenzará a 
+	ejecutarse la evolución del sistema; y con la <<tecla>> ``q" (quit), 
+	se debe terminar el programa
+	\item \textbf{Observación}: considerar la posibilidad de implementar el 
+	modelo con una matriz que tenga una fila/columna vacía extra en cada 
+	borde para evitar tener que considerar muchos casos particulares.	
+\end{itemize}
+
+\subsection{Ejercicio 2}
+Visualizar y verificar el comportamiento de las configuraciones 
+iniciales de tipo: ``Still lifes", ``Oscillators" \ y ``Spaceships", 
+descriptos en la sección \emph{Examples of patterns} de \url{https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life}
+
+\end{document}

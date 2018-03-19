@@ -1,0 +1,109 @@
+\documentclass[spanish,a4paper]{article} 
+
+\usepackage{listings}
+\input{Algo1Macros}
+
+\begin{document}
+
+\section{S\'imbolos \'utiles}
+
+\begin{tabular}{l|l}
+\ent & \lstinline|\ent| \\
+\float & \lstinline|\float| \\
+\bool & \lstinline|\bool |\\
+\True & \lstinline|\True |\\
+\False & \lstinline|\False |\\
+\Then & \lstinline|\Then |\\
+\Iff & \lstinline|\Iff |\\
+\implica & \lstinline|\implica |\\
+$\land$ & \lstinline|$\land$|\\
+$\lor$ & \lstinline|$\lor$|\\
+$\lnot$ & \lstinline|$\lnot$|\\
+$\yLuego$ & \lstinline|$\yLuego$|\\
+$\oLuego$ & \lstinline|$\oLuego$|\\
+$\implicaLuego$ & \lstinline|$\implicaLuego$|\\
+\IfThenElse{condicion}{verdadero}{falso} & \lstinline|\IfThenElse{condicion}{verdadero}{falso}| \\
+\rango{1}{10} & \lstinline|\rango{1}{10}|\\
+\rangoac{1}{10} & \lstinline|\rangoac{1}{10}|\\
+\rangoca{1}{10} & \lstinline|\rangoca{1}{10}|\\
+\rangoaa{1}{10} & \lstinline|\rangoaa{1}{10}| \\
+\rea & \lstinline|\rea |\\
+\cha & \lstinline|\cha |\\
+\prm{x} & \lstinline|\prm{x}|\\
+\sgd{x} & \lstinline|\sgd{x}|\\
+$\mcd$ & \lstinline|$\mcd$|\\
+\TLista{x} & \lstinline|\TLista{x}| \\
+\matriz{x} & \lstinline|\matriz{x}| \\
+\lvacia & \lstinline|\lvacia |\\
+%~ \lv & \lstinline|\lv |\\
+\cons{xs} & \lstinline|\cons{xs}|\\
+\indice{xs} & \lstinline|\indice{xs}|\\
+\conc{xs} & \lstinline|\conc{xs}|\\
+\cab{xs} & \lstinline|\cab{xs}|\\
+\cola{x} & \lstinline|\cola{x}|\\
+\sub{xs} & \lstinline|\sub{xs}|\\
+\en{xs} & \lstinline|\en{xs}|\\
+%~ \cuenta{2}{1} & \\
+%~ \suma{xs} & \\
+\masmas & \lstinline|\masmas |\\
+%~ \acum{231} & \lstinline|\acum|\\
+\acumselec{expresion}{selector}{condicion} & \lstinline|\acumselec{expresion}{selector}{condicion}|\\
+\selector{x}{\rango{1}{10}} & \lstinline|\selector{x}{\rango{1}{10}}|\\
+\end{tabular}
+
+\newpage
+
+\section{Definici\'on de Problemas}
+
+\begin{proc}{sumar}{\In a:\ent, \In b:\ent, \Out c: \ent}{}
+\pre{a \neq 0}
+\post{c = a+b}
+\end{proc}
+
+\begin{lstlisting}[frame=single] 
+\begin{proc}{sumar}{\In a:\ent, \In b:\ent, \Out c: \ent}{}
+    \pre{a \neq 0}
+    \post{c = a+b}
+\end{proc}
+\end{lstlisting}
+
+
+\begin{proc}{dividir}{\Inout a: \ent, \In b: \ent}{}
+    \pre{puedoDividir(b)}
+    \post[divide]{a = a/b}
+    \pred{puedoDividir}{b: \ent}{b \neq 0}
+\end{proc}
+
+\begin{lstlisting}[frame=single] 
+\begin{proc}{dividir}{\Inout a: \ent, \In b: \ent}{}
+    \pre{puedoDividir(b)}
+    \post[divide]{a = a/b}
+    \pred{puedoDividir}{b: \ent}{b \neq 0}
+\end{proc}
+\end{lstlisting}
+
+
+\begin{proc}{potencia}{\Inout b: \ent , \In e: \ent}{}
+    \pre{b = b_0}
+    \post{b = potencia(b_0,e)}
+    \aux{potencia}{b:\ent,e:\ent}{\ent}{b^e}
+\end{proc}
+
+\begin{lstlisting}[frame=single] 
+\begin{proc}{potencia}{\Inout b: \ent , \In e: \ent}{}
+    \pre{b = b_0}
+    \post{b = potencia(b_0,e)}
+    \aux{potencia}{b:\ent,e:\ent}{\ent}{b^e}
+\end{proc}
+\end{lstlisting}
+
+\subsubsection{Otros comandos \'utiles (cuando no estamos en environment proc)}
+
+\begin{tabular}{l|l}
+    \encabezadoDeProc{result}{Sumar}{\In a:\ent, \Inout b:\ent}{} & \lstinline|\encabezadoDeProc{result}{Sumar}{\In a:\ent, \Inout b:\ent}{}| \\
+    \preil{positivo}{a>0} & \lstinline|\preil{positivo}{a>0}| \\
+    \postil{divide}{res = b/a} & \lstinline|\postil{divide}{res = b/a}| \\
+    \auxnom{potencia} & \lstinline|\auxnom{potencia}| \\
+\end{tabular}
+
+\end{document}
