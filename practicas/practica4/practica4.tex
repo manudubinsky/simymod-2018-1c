@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{4}{Modelos Físicos: Método de diferencias finitas}
+
+\section{Introducción}
+
+\subsection{Método de diferencias finitas}
+
+Este método permite resolver sistemas de ecuaciones diferenciales 
+(ordinarias y en derivadas parciales)
+
+\bigskip
+
+Vamos a emplear los siguientes libros de referencia:
+
+\begin{enumerate}
+	\item \emph{Finite Difference Methods for Ordinary and Partial 
+	Differential Equations}
+	\item \emph{Finite Difference Computing with Exponential Decay 
+	Models}
+	\item \emph{Finite Difference Computing with PDEs}
+\end{enumerate}
+
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+Dada la función $u(x) = sin(x) + cos(x)$, realizar las siguientes 
+actividades:
+
+\begin{enumerate}
+	\item Graficar $u(x)$ con matplotlib
+	\item De acuerdo al ejemplo 1.1 del libro de referencia 1 (pag. 4), 
+	realizar el análisis del error para la función $u(x) = sin(x) + 
+	cos(x)$ para las discretizaciones $D_+u(x)$, $D_-u(x)$, $D_0u(x)$ en 
+	$x = 1$
+	\item Graficar en escala log-log los errores calculados en el punto 
+	anterior (del libro 1, ver Figura 1.2, pag. 6).
+\end{enumerate}
+
+Referencia: \url{https://matplotlib.org/users/pyplot_tutorial.html}
+
+\subsection{Ejercicio 2}
+En base a los tres esquemas descriptos en la sección 1.1 del libro 2 
+(\emph{Forward Euler}, \emph{Backward Euler}, \emph{Crank-Nicholson }), 
+realizar discretizaciones para el ejericio 4.2 (pág. 112).
+
+\subsection{Ejercicio 3}
+En base a la implementación en la sección 1.1 del libro 2 (pág. 15):
+
+\begin{enumerate}
+	\item Realizar los puntos a), b) y c) del ejercicio 4.3 (pág 113)
+	\item Realizar el ejercicio 4.4 (pág. 114)
+\end{enumerate}
+ 
+\subsection{Ejercicio 4}
+Evaluar la posibilidad de realizar una animación de la Ley de 
+Enfriamiento de Newton en la cual el color de una circunferencia varíe 
+del rojo al azul a medida que se va enfriando.
+
+\bigskip
+
+Referencia 1: considerar el \emph{modelo\_simple2.py} de la práctica 3
+
+\smallskip
+
+Referencia 2: \url{https://matplotlib.org/1.5.1/api/colors_api.html}
+
+\end{document}

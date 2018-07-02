@@ -1,0 +1,72 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{2}{Modelos Físicos: Mecánica Clásica}
+
+\section{Introducción}
+
+\subsection{Mecánica Clásica}
+
+La \textbf{Mecánica Clásica} es una teoría que permite decribir el 
+movimiento de objetos macroscópicos: desde proyectiles hasta el 
+movimiento de los planetas y las galaxias. Provee resultados muy 
+precisos siempre y cuando los objetos: 1) no sean demasiado pesados, 2) 
+no sean demasido pequeños, 3) la veloacidad no esté cerca de la 
+velocidad de la luz. Para tener una breve descripción de los conceptos 
+de la teoría ver: \url{https://en.wikipedia.org/wiki/Classical_mechanics}
+
+\bigskip
+
+Como referencia para los ejercicios vamos a utilizar el libro \url{http://farside.ph.utexas.edu/teaching/301/lectures/}
+
+\subsection{Modelo Simple}
+
+Para realizar esta práctica se provee un modelo simple en python 
+que utiliza la funcionalidad de animación del módulo 
+\emph{matplotlib}. Una particula está modelada mediante un vector de 4 
+componentes: $[x, y, v_x, v_y]$, donde el par $[x,y]$ corresponde a la 
+posición y el par $[v_x, v_y]$ son las componentes del vector velocidad.
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+Realizar una simulación ideal (sin rozamiento) de un proceso de caída libre \url{http://farside.ph.utexas.edu/teaching/301/lectures/node19.html#e218}
+
+\begin{itemize}
+	\item ¿Cuánto tarda en caer un objeto desde 100 metros? Comparar el 
+	resultado que arroja la simulación y el modelo de la teoría.
+\end{itemize}
+
+\subsection{Ejercicio 2}
+
+Realizar una simulación del lanzamiento de una bala de cañón y 
+verificar el ejemplo en \url{http://farside.ph.utexas.edu/teaching/301/lectures/node38.html}
+
+\subsection{Ejercicio 3}
+
+Realizar una simulación del modelo más simple de colisión 
+unidimensional: entre dos partículas de la misma masa \url{http://farside.ph.utexas.edu/teaching/301/lectures/node76.html}
+
+\subsection{Ejercicio 4}
+
+De acuerdo al documento \emph{2dcollisions2.pdf}, realizar una 
+simulación del modelo más simple de colisión bidimensional: entre 
+dos partículas de la misma masa.
+
+\begin{itemize}
+	\item Modelar un conjunto de 50 partículas colisionando entre sí.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,133 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{6}{Distribuciones de Probabilidad}
+
+\section{Introducción}
+
+Las \emph{distribuciones de probabilidad} son funciones que devuelven 
+la probabilidad de ocurrencia de los distintos eventos en un 
+experimento. Por ejemplo, las probabilidades de cara y ceca en el 
+lanzamiento de una moneda.
+
+\bigskip
+
+Hay \emph{distribuciones discretas} en el que los resultados del experimento 
+pertenecen a un conjunto discreto (ej.: $\mathbb{N}$), por ejemplo el lanzamiento de una 
+moneda o un dado. la cantidad de personas que hay en un negocio en 
+momento dado.
+
+\bigskip
+
+Y hay \emph{distribuciones continuas} en el que los resultados del 
+experimento toman valores en un rango continuo (ej.: $\mathbb{R}$), por ejemplo la 
+temperatura de una habitación o el tiempo de llegada del próximo 
+cliente a un negocio.
+
+\bigskip
+
+Cada \emph{variable aleatoria} se asocia a una distribución de 
+probabilidades. 
+
+\bigskip
+
+Referencia general: \url{https://www.probabilitycourse.com}
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+La función \emph{nmupy.random.random} genera un valor  
+aleatorio en el intervalo $[0,1)$. Se pide verificar mediante un 
+conjunto de experimentos que los valores aleatorios corresponden a una 
+\emph{distribución uniforme}:
+
+\begin{enumerate}
+\item Generar una lista de 100 valores y graficar un histograma con 50 
+bins
+\item Idem 1) con una lista de 1000 valores
+\item Idem 1) con una lista de 10000 valores
+\item Idem 1) con una lista de 100000 valores
+\end{enumerate}
+
+\bigskip
+
+Referencia: 
+\url{https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.random.rand.html}
+
+\smallskip
+
+Referencia: 
+\url{https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html}
+
+\smallskip
+
+Referencia: 
+\url{https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)}
+
+\subsection{Ejercicio 2}
+
+Escribir funciones para generar variables aleatorias asociadas a las 
+distribuciones discretas detalladas en 
+\url{https://www.probabilitycourse.com/chapter3/3_1_5_special_discrete_distr.php}
+
+\begin{itemize}
+\item $X \ \sim \ Bernoulli(p)$
+\item $X \ \sim \ Geometric(p)$
+\item $X \ \sim \ Binomial(n,p)$
+\item $X \ \sim \ Pascal(m,p)$
+\item $X \ \sim \ Hypergeometric(b,r,k)$
+\end{itemize}
+
+\subsection{Ejercicio 3}
+
+Mediante el \emph{método inverso} escribir una función para 
+generar una variable aleatoria con \emph{distribución exponencial} ($X 
+\sim Exponential(\lambda)$).
+
+
+\bigskip
+
+Referencia: \url{https://en.wikipedia.org/wiki/Inverse_transform_sampling}
+
+\smallskip
+
+Referencia: 
+\url{https://www.probabilitycourse.com/chapter4/4_2_2_exponential.php} 
+
+\subsection{Ejercicio 4}
+
+Utilizando la función del ejercicio 3 escribir otra función para 
+generar una variable aleatoria con \emph{distribución Poisson} ($X 
+\sim Poisson(\lambda)$).
+
+\subsection{Ejercicio 5}
+
+La \emph{distribución normal} no puede generarse mediante el método 
+inverso (como la exponencial) porque no se puede calcular 
+explícitamente su función acumulada. Por lo tanto, se requieren otros 
+métodos para generarla. Mediante el \emph{método de Box-Muller} 
+generar una distribución normal estándar.
+
+\bigskip
+
+Referencia (general): 
+\url{https://www.probabilitycourse.com/chapter4/4_2_3_normal.php}
+
+\smallskip
+
+Referencia (Box-Muller): 
+\url{https://en.wikipedia.org/wiki/Normal_distribution#Generating_values_from_normal_distribution}
+
+\end{document}

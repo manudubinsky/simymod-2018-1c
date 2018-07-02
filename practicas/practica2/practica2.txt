@@ -1,0 +1,6 @@
+caida libre
+trayectoria balística
+colisiones
+atracción entre dos cuerpos
+órbitas planetarias
+satélite geo-estacionario

@@ -1,0 +1,83 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{3}{Modelos Físicos: Mecánica Clásica II}
+
+\section{Introducción}
+
+\subsection{Mecánica Clásica}
+
+La \textbf{Mecánica Clásica} es una teoría que permite decribir el 
+movimiento de objetos macroscópicos: desde proyectiles hasta el 
+movimiento de los planetas y las galaxias. Provee resultados muy 
+precisos siempre y cuando los objetos: 1) no sean demasiado pesados, 2) 
+no sean demasido pequeños, 3) la veloacidad no esté cerca de la 
+velocidad de la luz. Para tener una breve descripción de los conceptos 
+de la teoría ver: \url{https://en.wikipedia.org/wiki/Classical_mechanics}
+
+\bigskip
+
+Como referencia para los ejercicios vamos a utilizar el libro \url{http://farside.ph.utexas.edu/teaching/301/lectures/}
+
+\bigskip
+
+La descripciòn teórica del movimiento circular uniforme se puede ver en \url{http://farside.ph.utexas.edu/teaching/301/lectures/node86.html}
+
+\subsection{Modelos Simples}
+
+Para realizar esta práctica se proveen dos modelos simples en python 
+que utilizan la funcionalidad de animación del módulo 
+\emph{matplotlib}:
+
+\begin{itemize}
+	\item \textbf{modelo\_simple.py}: es el mismo modelo de la práctica 2. 
+	\item \textbf{modelo\_simple2.py}: es un modelo que que diseña un 
+	circunferencia de forma más concreta. 
+\end{itemize}
+
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+Realizar una simulación de una circunferencia de radio 1 que describa un 
+movimiento circular uniforme de radio 10 en torno al origen.
+
+\subsection{Ejercicio 2}
+
+Realizar una simulación de una circunferencia de radio 1 que describa un 
+movimiento circular uniforme de radio 5 en torno a otra circunferencia 
+de radio 1 centrada en el (2,2).
+
+
+\subsection{Ejercicio 3}
+
+Realizar un modelo bidimensional a escala de la órbita lunar alrededor 
+de la Tierra y de ambos alrededor del Sol. Considerar las siguientes 
+simplificaciones del modelo:
+
+\begin{itemize}
+	\item Las órbitas son circulares de velocidad uniforme.
+	\item Los tres cuerpos celestes pueden tener el mismo tamaño (esto 
+	se debe a que el tamaño del Sol es mucho mayor que el de la 
+	Tierra y eso impediría verlos a ambos en la simulación).
+	\item Considerar que la luna realiza una órbita (en torno a la 
+	Tierra) por mes y que la Tierra realiza una órbita (en torno al Sol) 
+	en doce meses. 
+	\item Considerar las escalas de las distiancias Luna-Tierra y 
+	Tierra-Sol (o sea los radios de las órbitas).
+	\item Ubicar al Sol en el centro de coordenadas (0,0)
+\end{itemize}
+
+\end{document}

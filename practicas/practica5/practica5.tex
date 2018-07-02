@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+\usepackage{a4wide}
+\usepackage{amsmath, amscd, amssymb, amsthm, latexsym}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{longtable}
+\usepackage{graphics}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\input{../../macros/Algo1Macros}
+
+\begin{document}
+\practica{5}{Modelos Físicos: Método de diferencias finitas 2}
+
+\section{Introducción}
+
+\subsection{Método de diferencias finitas}
+
+Este método permite resolver sistemas de ecuaciones diferenciales 
+(ordinarias y en derivadas parciales)
+
+\bigskip
+
+Vamos a emplear los siguientes libros de referencia:
+
+\begin{enumerate}
+	\item \emph{Finite Difference Methods for Ordinary and Partial 
+	Differential Equations}
+	\item \emph{Finite Difference Computing with Exponential Decay 
+	Models}
+	\item \emph{Finite Difference Computing with PDEs}
+\end{enumerate}
+
+
+\section{Ejercicios}
+
+\subsection{Ejercicio 1}
+
+De acuerdo con la descripción del libro \emph{Finite Difference 
+Computing with PDEs}, se pide implementar la resolución de la 
+ecuación de onda unidimensional por diferencias finitas.
+
+\subsection{Ejercicio 2}
+Implementar la posibilidad de visualizar animaciones de la cadena en 2D.
+
+\bigskip
+
+Referencia: basarse en las animaciones realizadas en las prácticas 
+anteriores.
+
+\subsection{Ejercicio 3}
+Realizar experimentos (animaciones) variando la función ($I(x)$) y la 
+velocidad de la onda ($c$).
+
+\smallskip
+
+Para cada una de las funciones que se detallan a continuación, 
+considerar las velocidades ($c = 1, \frac{1}{2}, 2$) en el intervalo $x 
+\in [0,10]$
+
+\begin{itemize}
+\item $I(x) = -\frac{1}{5} x^2 + 2 x$
+\item $I(x) = 2 sin(x)$
+\item \begin{equation}
+  I(x) =
+    \begin{cases}
+      1 & \text{x $\in [0,1]$}\\
+      0 & \text{en caso contrario}
+    \end{cases}       
+\end{equation}
+\end{itemize}
+
+\subsection{Ejercicio 4}
+Realizar visualizaciones en 3D de la resolución de la ecuación de 
+onda para los casos del punto 3.
+
+\bigskip
+
+Referencia: \emph{plot3D.py}.
+
+ 
+\end{document}
